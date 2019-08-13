@@ -166,6 +166,10 @@ void BaseApp::onPlatoonBeacon(const PlatooningBeacon* pb)
         vehicleData.speedX = pb->getSpeedX();
         vehicleData.speedY = pb->getSpeedY();
         vehicleData.angle = pb->getAngle();
+        //print out the vehicle data
+        EV << "Receive:";
+        EV << "index "  << vehicleData.index << "\n";
+        EV << "speed "  << vehicleData.speed << "\n";
         // send information to CACC
         traciVehicle->setVehicleData(&vehicleData);
     }

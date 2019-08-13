@@ -6,18 +6,10 @@ file = map-config
 resdir = ../results
 
 [config]
-config = Sinusoidal
-out = Sinusoidal
+config = SumoTraffic
+out = SumoTraffic
 map    = %(defaultMap)s
 mapFile = %(file)s
-prefix = sin
-merge = 1
-
-[config]
-config = Braking
-out = Braking
-map    = %(defaultMap)s
-mapFile = %(file)s
-prefix = bra
+prefix = sumo
 merge = 1
 

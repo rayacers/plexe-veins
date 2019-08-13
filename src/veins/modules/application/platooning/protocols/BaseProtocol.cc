@@ -165,9 +165,25 @@ void BaseProtocol::sendPlatooningMessage(int destinationAddress)
     PlatooningBeacon* pkt = new PlatooningBeacon();
     pkt->setControllerAcceleration(data.u);
     pkt->setAcceleration(data.acceleration);
-    pkt->setSpeed(data.speed);
+    //pkt->setSpeed(data.speed);
+    //Simulate attacking
+    if(myId == 0){
+        pkt->setSpeed(data.speed+2);
+    }
+    else{
+        pkt->setSpeed(data.speed);
+    }
+    //End simulate attacking
     pkt->setVehicleId(myId);
-    pkt->setPositionX(data.positionX);
+    //Simulate attacking
+    //pkt->setPositionX(data.positionX);
+    if(myId == 7){
+        pkt->setPositionX(data.positionX);
+    }
+    else{
+        pkt->setPositionX(data.positionX);
+    }
+    //End Simulate
     pkt->setPositionY(data.positionY);
     // set the time to now
     pkt->setTime(data.time);
