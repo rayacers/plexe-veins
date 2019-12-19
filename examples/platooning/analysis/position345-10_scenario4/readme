@@ -1,0 +1,27 @@
+if(myId == 3){
+        if(data.time>=20 && fmod(data.time,10) < 5){
+            pkt->setPositionX(data.positionX-10);
+        }
+        else{
+            pkt->setPositionX(data.positionX);
+        }
+    }
+    else if(myId == 4){
+        if(data.time>=20 && fmod(data.time,15) <= 10){
+            pkt->setPositionX(data.positionX-10);
+        }
+        else{
+            pkt->setPositionX(data.positionX);
+        }
+    }
+    else if(myId == 5){
+        if(data.time>=20 && fmod(data.time,20) <= 10){
+            pkt->setPositionX(data.positionX-10);
+        }
+        else{
+            pkt->setPositionX(data.positionX);
+        }
+    }
+    else{
+        pkt->setPositionX(data.positionX);
+    }

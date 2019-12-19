@@ -1,0 +1,8 @@
+    <vehicle type="vtypeauto" id="0" depart="5" departPos="368" departSpeed="27" route="platoon_route" />
+    <vehicle type="vtypeauto" id="1" depart="5" departPos="322" departSpeed="25" route="platoon_route" />
+    <vehicle type="vtypeauto" id="2" depart="5" departPos="276" departSpeed="23" route="platoon_route" />
+    <vehicle type="vtypeauto" id="3" depart="5" departPos="230" departSpeed="22" route="platoon_route" />
+    <vehicle type="vtypeauto" id="4" depart="5" departPos="184" departSpeed="21" route="platoon_route" />
+    <vehicle type="vtypeauto" id="5" depart="5" departPos="138" departSpeed="20" route="platoon_route" />
+    <vehicle type="vtypeauto" id="6" depart="5" departPos="92" departSpeed="19" route="platoon_route" />
+    <vehicle type="vtypeauto" id="7" depart="5" departPos="46" departSpeed="18" route="platoon_route" />

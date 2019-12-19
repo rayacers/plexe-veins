@@ -168,18 +168,57 @@ void BaseProtocol::sendPlatooningMessage(int destinationAddress)
     //pkt->setSpeed(data.speed);
     //Simulate attacking
     if(myId == 0){
-        pkt->setSpeed(data.speed+2);
+        pkt->setSpeed(data.speed);
+        pkt->setSpeedX(data.speedX);
     }
     else{
         pkt->setSpeed(data.speed);
+        pkt->setSpeedX(data.speedX);
     }
     //End simulate attacking
     pkt->setVehicleId(myId);
     //Simulate attacking
     //pkt->setPositionX(data.positionX);
-    if(myId == 7){
-        pkt->setPositionX(data.positionX);
+    if(myId == 3){
+        if(data.time>=5){
+            pkt->setPositionX(data.positionX-10);
+        }
+        else{
+            pkt->setPositionX(data.positionX);
+        }
     }
+    else if(myId == 1){
+        if(data.time>=5){
+            pkt->setPositionX(data.positionX+15);
+        }
+        else{
+            pkt->setPositionX(data.positionX);
+        }
+    }
+    else if(myId == 4){
+        if(data.time>=5){
+            pkt->setPositionX(data.positionX+5);
+        }
+        else{
+            pkt->setPositionX(data.positionX);
+        }
+    }
+    /*else if(myId == 4){
+        if(data.time>=20 && fmod(data.time,15) <= 10){
+            pkt->setPositionX(data.positionX-10);
+        }
+        else{
+            pkt->setPositionX(data.positionX);
+        }
+    }
+    else if(myId == 5){
+        if(data.time>=20 && fmod(data.time,20) <= 10){
+            pkt->setPositionX(data.positionX-10);
+        }
+        else{
+            pkt->setPositionX(data.positionX);
+        }
+    }*/
     else{
         pkt->setPositionX(data.positionX);
     }
@@ -188,7 +227,7 @@ void BaseProtocol::sendPlatooningMessage(int destinationAddress)
     // set the time to now
     pkt->setTime(data.time);
     pkt->setLength(length);
-    pkt->setSpeedX(data.speedX);
+    //pkt->setSpeedX(data.speedX);
     pkt->setSpeedY(data.speedY);
     pkt->setAngle(data.angle);
     // i generated the message, i send it
